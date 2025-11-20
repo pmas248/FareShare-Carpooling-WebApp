@@ -1,4 +1,3 @@
-=======
 # FareShare
 ## A community-driven carpooling app
 
@@ -191,10 +190,6 @@ https://drive.google.com/file/d/1_Nau5MsH6Q5-XqVfo9MJNOYw85OYfrDq/view?usp=drive
 
 ---
 
-
-
----
-
 ## Usage
 
 1. **Sign Up / Sign In**: Create an account or log in.
@@ -212,6 +207,5 @@ https://drive.google.com/file/d/1_Nau5MsH6Q5-XqVfo9MJNOYw85OYfrDq/view?usp=drive
 
 Our FareShare web application is hosted entirely using AWS Free Tier services. Both the frontend and backend are containerized with Docker and deployed on a t2.micro EC2 instance. The application is served via AWS CloudFront CDN and secured (HTTPS) using its default SSL certificate.
 
-[comment]: # (Check out the live site here: [FareShare Website](https://d2aq4tfj8omjdo.cloudfront.net/))
 
 
