@@ -1,21 +1,3 @@
-
-# CS732 project - Team Think Tank
-
-Welcome to the CS732 project. We look forward to seeing the amazing things you create this semester! This is your team's repository.
-
-Your team members are:
-- Ketan Ketan _(kket819@aucklanduni.ac.nz)_
-- Rohit Kandan _(rkan980@aucklanduni.ac.nz)_
-- Trupti Vijay Ahire _(tahi709@aucklanduni.ac.nz)_
-- Purvesh Masurkar _(pmas248@aucklanduni.ac.nz)_
-- Carol Richa D souza Carol Richa D souza _(ccar875@aucklanduni.ac.nz)_
-- Gautham Basker Anand Maharajan _(gana081@aucklanduni.ac.nz)_
-
-You have complete control over how you run this repo. All your members will have admin access. The only thing setup by default is branch protections on `main`, requiring a PR with at least one code reviewer to modify `main` rather than direct pushes.
-
-Please use good version control practices, such as feature branching, both to make it easier for markers to see your group's history and to lower the chances of you tripping over each other during development
-
-![](./Think%20Tank.png)
 =======
 # FareShare
 ## A community-driven carpooling app
@@ -37,7 +19,6 @@ A webapp application built with the MERNN (MongoDB, Express, React, Node.js, Rea
 6. [Folder Structure](#folder-structure)
 7. [Usage](#usage)
 8. [Web Application](#web-application)
-9. [License](#license)
 
 ---
 
@@ -231,10 +212,6 @@ https://drive.google.com/file/d/1_Nau5MsH6Q5-XqVfo9MJNOYw85OYfrDq/view?usp=drive
 
 Our FareShare web application is hosted entirely using AWS Free Tier services. Both the frontend and backend are containerized with Docker and deployed on a t2.micro EC2 instance. The application is served via AWS CloudFront CDN and secured (HTTPS) using its default SSL certificate.
 
-Check out the live site here: [FareShare Website](https://d2aq4tfj8omjdo.cloudfront.net/)
+[comment]: # (Check out the live site here: [FareShare Website](https://d2aq4tfj8omjdo.cloudfront.net/))
 
----
-## License
-
-This project was done for the COMPSCI 732 course taught by Andrew Meads at the University of Auckland. This project was completed as a group assignment for the course, and as such all assets and code created in this project are under the universities licensing.
 
