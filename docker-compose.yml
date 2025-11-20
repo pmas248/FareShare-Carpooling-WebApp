@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend_server
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend_server/.env
+
+  frontend:
+    build: ./frontend_reactNative
+    ports:
+      - "80:80"
+    depends_on:
+      - backend

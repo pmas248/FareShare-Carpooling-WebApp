@@ -1,0 +1,78 @@
+name: Production Code
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  windows-build:
+    name: Windows Node CI
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        node-version: [22.14.0]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install backend dependencies
+      working-directory: ./backend_server
+      run: npm install
+
+    - name: Run backend tests
+      working-directory: ./backend_server
+      run: |
+        $env:NODE_ENV="test"
+        npm test
+      shell: pwsh
+
+
+    - name: Install frontend dependencies
+      working-directory: ./frontend_reactNative
+      run: npm install
+
+    - name: Lint frontend
+      working-directory: ./frontend_reactNative
+      run: npm run lint
+
+  macos-build:
+    name: macOS Node CI
+    runs-on: macos-latest
+
+    strategy:
+      matrix:
+        node-version: [22.14.0]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install backend dependencies
+      working-directory: ./backend_server
+      run: npm install
+
+    - name: Run backend tests         
+      working-directory: ./backend_server
+      run: NODE_ENV=test npm test
+
+    - name: Install frontend dependencies
+      working-directory: ./frontend_reactNative
+      run: npm install
+
+    - name: Run frontend lint
+      working-directory: ./frontend_reactNative
+      run: npm run lint
